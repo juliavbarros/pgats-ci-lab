@@ -29,7 +29,7 @@ jobs:
           node-version: 22.x
 
       # instalação do Yarn
-      - name: Instaalando Yarn
+      - name: Instalando Yarn
         run: npm install -g yarn
 
       # instalação das dependencias
