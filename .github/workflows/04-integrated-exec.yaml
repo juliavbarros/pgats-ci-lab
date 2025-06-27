@@ -2,7 +2,7 @@
 
 name: 'Execução Integrada'
 
-on: 
+on:
   workflow_dispatch:
 
 jobs:
@@ -39,7 +39,6 @@ jobs:
       - name: Executando testes de unidade
         run: yarn test
 
-
   e2e-tests:
     runs-on: ubuntu-latest
 
@@ -70,13 +69,13 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
-        with: 
+        with:
           name: relatorio
           path: ./playwright-report
 
   deploy:
     runs-on: ubuntu-latest
 
-    steps: 
+    steps:
       - name: Simulação do Deploy
         run: echo "simulando o deploy com sucesso"
