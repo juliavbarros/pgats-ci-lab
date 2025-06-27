@@ -13,13 +13,13 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Instalando Yarn
-      - run: npm install -g yarn
+        run: npm install -g yarn
 
       - name: Instalando dependências
-      - run: yarn
+        run: yarn
 
       - name: Checando padronização do código
-      - run: yarn lint
+        run: yarn lint
 
   unidade:
     runs-on: ubuntu-latest
@@ -28,16 +28,16 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Instalando Yarn
-      - run: npm install -g yarn
+        run: npm install -g yarn
 
       - name: Instalando dependências
-      - run: yarn
+        run: yarn
 
       - name: Checando padronização do código
-      - run: yarn lint
+        run: yarn lint
 
       - name: Executando testes de unidade
-      - run: yarn test
+        run: yarn test
 
 
   e2e-tests:
@@ -79,4 +79,4 @@ jobs:
 
     steps: 
       - name: Simulação do Deploy
-      - run: echo "simulando o deploy com sucesso"
+        run: echo "simulando o deploy com sucesso"
